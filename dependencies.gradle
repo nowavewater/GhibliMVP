@@ -1,0 +1,79 @@
+def supportVersion = "27.0.2"
+def constraintVersion = "1.1.0-beta4"
+def rxBindingVersion = "0.4.0"
+def rxJavaVersion = "2.1.7"
+def retrofitVersion = "2.2.0"
+def rxAndroidVersion = "2.0.1"
+def okHttpVersion = "3.7.0"
+def stethoVersion = "1.5.0"
+def butterKnifeVersion = "8.5.1"
+def daggerVersion = "2.8"
+def archVersion = "1.0.0"
+def frescoVersion = "1.5.0"
+
+
+project.ext {
+    android = [
+            compileSdkVersion: 27,
+            applicationId    : "com.pengcheng.ghiblimvp",
+            minSdkVersion    : 21,
+            targetSdkVersion : 27,
+            versionCode      : 1,
+            versionName      : "1.0.0"
+    ]
+
+    dependencies = [
+            //android-support
+            "support-v4"                     : "com.android.support:support-v4:${supportVersion}",
+            "appcompat-v7"                   : "com.android.support:appcompat-v7:${supportVersion}",
+            "design"                          : "com.android.support:design:${supportVersion}",
+            "recyclerview"                   : "com.android.support:recyclerview-v7:${supportVersion}",
+            "cardview"                        : "com.android.support:cardview-v7:${supportVersion}",
+
+            //java8-support
+            "stream"                           : "com.annimon:stream:1.0.8",
+
+            // constraint-layout
+            "constraint-layout"              : "com.android.support.constraint:constraint-layout:${constraintVersion}",
+
+            //rx
+            "rxjava"                         : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            "rxandroid"                      : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            "rxbinding"                      : "com.jakewharton.rxbinding:rxbinding:${rxBindingVersion}",
+            "rxbinding-support-v4"          : "com.jakewharton.rxbinding:rxbinding-support-v4:${rxBindingVersion}",
+            "rxbinding-appcompat-v7"        : "com.jakewharton.rxbinding:rxbinding-appcompat-v7:${rxBindingVersion}",
+            "rxbinding-design"              : "com.jakewharton.rxbinding:rxbinding-design:${rxBindingVersion}",
+            "rxbinding-recyclerview-v7"    : "com.jakewharton.rxbinding:rxbinding-recyclerview-v7:${rxBindingVersion}",
+
+            //retrofit
+            "retrofit"                      : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            "adapter-rxjava"               : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+            "gson-converter"               : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+
+            //fresco
+            "fresco"                        : "com.facebook.fresco:fresco:${frescoVersion}",
+            "fresco-gif"                   : "com.facebook.fresco:animated-gif:${frescoVersion}",
+
+            //dagger
+            "dagger"                       : "com.google.dagger:dagger:${daggerVersion}",
+            "dagger-compiler"             : "com.google.dagger:dagger-compiler:${daggerVersion}",
+
+            //facebook
+            "stetho"                       : "com.facebook.stetho:stetho:${stethoVersion}",
+            "stetho-okhttp3"              : "com.facebook.stetho:stetho-okhttp3:${stethoVersion}",
+
+            // arch
+            "arch-lifecycles"             : "android.arch.lifecycle:common-java8:${archVersion}",
+
+            // room
+            "arch-room"                    : "android.arch.persistence.room:runtime:${archVersion}",
+            "arch-room-compiler"          : "android.arch.persistence.room:compiler:${archVersion}",
+            "arch-room-rxjava"            : "android.arch.persistence.room:rxjava2:${archVersion}",
+
+
+            //others
+            "okhttp3-logging-interceptor" : "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
+            "butterknife"                  : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            "butterknife-compiler"        : "com.jakewharton:butterknife-compiler:${butterKnifeVersion}",
+    ]
+}
