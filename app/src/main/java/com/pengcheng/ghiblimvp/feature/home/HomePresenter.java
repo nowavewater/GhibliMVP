@@ -55,6 +55,9 @@ public class HomePresenter  implements HomeContract.Presenter, LifecycleObserver
     }
 
     private void onDataReceived(List<Film> filmList){
+
+
+        view.showFilmList(filmList);
     }
 
     private void handleError(Throwable error) {

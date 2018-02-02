@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="activity_margin">16dp</dimen>
+
+
+
+    <!-- Home -->
+    <dimen name="film_title_size">20sp</dimen>
+    <dimen name="film_info_size">16sp</dimen>
+
+</resources>
